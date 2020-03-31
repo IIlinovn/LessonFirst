@@ -11,6 +11,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductViewComponent } from './product-view/product-view.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductService } from './product.service';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   imports: [ 
@@ -26,6 +27,6 @@ import { ProductService } from './product.service';
     ProductEditComponent 
   ],
   bootstrap: [ AppComponent ],
-  providers: [ ProductService ]
+  providers: [ ProductService, {provide: APP_BASE_HREF, useValue : '/' } ]
 })
 export class AppModule { }
