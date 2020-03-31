@@ -1,0 +1,10 @@
+<table>
+	<tr *ngFor="let item of products">
+		<td> {{item.title}} </td>
+		<td> {{item.anons}} </td>
+		<td> <img [src]="item.image" alt=""> </td>
+		<td>
+			<a [routerLink]=" 'view' ">Подробнее</a>
+		</td>
+	</tr>
+</table>
