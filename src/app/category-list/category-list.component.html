@@ -1,0 +1,13 @@
+<span>категории</span> / <a routerLink="/">Список товаров</a>
+
+<table>
+	<tr *ngFor="let item of category">
+		<td> 
+      <hr>
+			<h4>{{item.title}}</h4>
+			<p>{{item.anons}}</p>
+			<br>
+			<a [routerLink]=" '/category/view' ">Подробнее</a>
+		</td>
+	</tr>
+</table>
