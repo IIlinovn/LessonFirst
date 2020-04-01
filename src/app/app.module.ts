@@ -15,6 +15,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { CategoryService } from './category.service';
 import { CategoryViewComponent } from './category-view/category-view.component';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   imports: [ 
@@ -22,6 +23,7 @@ import { CategoryViewComponent } from './category-view/category-view.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    UserModule,
   ],
   declarations: [ 
     AppComponent, 

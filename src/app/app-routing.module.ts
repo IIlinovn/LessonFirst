@@ -5,6 +5,7 @@ import { ProductViewComponent } from './product-view/product-view.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { CategoryViewComponent } from './category-view/category-view.component';
+import { UserModule } from './user/user.module';
 
 const routes: Routes = [
   { path: '', component: ProductListComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'edit', component: ProductEditComponent },
   { path: 'category', component: CategoryListComponent },
   { path: 'category/:id', component: CategoryViewComponent },
+  { path: 'user', loadChildren: () => UserModule },
 ]
 
 @NgModule({
