@@ -22,7 +22,7 @@ export class UserService {
         this.email = email;
 
         return this.http
-            .post('http://localhost:8000/api/auth/login', {email, password})
+            .post('http://lesson-4.iilinov-n.myjino.ru/api/auth/login', {email, password})
             .pipe(
                 tap((res: { access_token: string, token_type: string, expires_in: number }) => {
                     this.token = res.access_token;
@@ -33,7 +33,7 @@ export class UserService {
 
     me() {
         return this.http
-            .post('http://localhost:8000/api/auth/me', {token: this.token})
+            .post('http://lesson-4.iilinov-n.myjino.ru/api/auth/me', {token: this.token})
     }
 
     updateImage(fileToUpload: File) {
@@ -41,11 +41,11 @@ export class UserService {
         formData.append('avatar', fileToUpload);
         formData.append('token', this.token);
         return this.http
-            .post('http://localhost:8000/api/products/1/image', formData)
+            .post('http://lesson-4.iilinov-n.myjino.ru/api/products/1/image', formData)
     }
 
     update(user) {
         return this.http
-            .put('http://localhost:8000/api/auth/user/' + user.id, {...user, token: this.token})
+            .put('http://lesson-4.iilinov-n.myjino.ru/api/auth/user/' + user.id, {...user, token: this.token})
     }
 }

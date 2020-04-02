@@ -9,11 +9,11 @@ export class ProductService {
   ) { }
 
   loadAll() {
-    return this.httpClient.get("http://iilinov-n.myjino.ru/products")
+    return this.httpClient.get("http://lesson-4.iilinov-n.myjino.ru/api/products")
   }
 
   loadById(id) {
-    return this.httpClient.get("http://iilinov-n.myjino.ru/products/" + id)
+    return this.httpClient.get("http://lesson-4.iilinov-n.myjino.ru/api/products/" + id)
   }
 
 }

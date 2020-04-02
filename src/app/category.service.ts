@@ -9,11 +9,11 @@ export class CategoryService {
   ) { }
 
   loadAll() {
-    return this.httpClient.get("http://lesson-3.iilinov-n.myjino.ru/api/category")
+    return this.httpClient.get("http://lesson-4.iilinov-n.myjino.ru/api/category")
   }
 
   loadById(id) {
-    return this.httpClient.get("http://lesson-3.iilinov-n.myjino.ru/api/category/" + id)
+    return this.httpClient.get("http://lesson-4.iilinov-n.myjino.ru/api/category/" + id)
   }
 
 }
