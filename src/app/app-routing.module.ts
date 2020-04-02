@@ -10,7 +10,7 @@ import { UserModule } from './user/user.module';
 const routes: Routes = [
   { path: '', component: ProductListComponent },
   { path: 'view', component: ProductViewComponent },
-  { path: 'edit', component: ProductEditComponent },
+  { path: 'edit/:id', component: ProductEditComponent },
   { path: 'category', component: CategoryListComponent },
   { path: 'category/:id', component: CategoryViewComponent },
   { path: 'user', loadChildren: () => UserModule },

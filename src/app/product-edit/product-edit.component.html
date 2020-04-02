@@ -1,3 +1,8 @@
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, animi cum est magni maiores optio quas quia repellendus sit unde. Adipisci aperiam aspernatur, blanditiis exercitationem ipsum qui quos totam veniam.
+<p *ngIf="product">
+    <input type="text" [(ngModel)]="product.title" placeholder="title"> <br>
+    <input type="text" [(ngModel)]="product.anons" placeholder="anons"> <br>
+    <input type="text" [(ngModel)]="product.desc" placeholder="desc"> <br>
+    <input type="text" [(ngModel)]="product.image" placeholder="image"> <br>
+
+    <button (click)="updateProduct()">Save</button>
 </p>
