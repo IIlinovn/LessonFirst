@@ -15,7 +15,7 @@ export class UserAuthComponent implements OnInit {
     ) {
     }
 
-    email = 'goreilly@example.com'
+    email = 'grady77@example.org'
     password = 'password'
 
     ngOnInit() {

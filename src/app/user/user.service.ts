@@ -35,4 +35,17 @@ export class UserService {
         return this.http
             .post('http://localhost:8000/api/auth/me', {token: this.token})
     }
+
+    updateImage(fileToUpload: File) {
+        const formData: FormData = new FormData();
+        formData.append('avatar', fileToUpload);
+        formData.append('token', this.token);
+        return this.http
+            .post('http://localhost:8000/api/products/1/image', formData)
+    }
+
+    update(user) {
+        return this.http
+            .put('http://localhost:8000/api/auth/user/' + user.id, {...user, token: this.token})
+    }
 }

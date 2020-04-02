@@ -5,9 +5,10 @@ import { UserRoutingModule } from './user-routing.module';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { FormsModule } from '@angular/forms';
 import { UserViewComponent } from './user-view/user-view.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 @NgModule({
-  declarations: [UserAuthComponent, UserViewComponent],
+  declarations: [UserAuthComponent, UserViewComponent, UserEditComponent],
   imports: [
     CommonModule,
     UserRoutingModule,
